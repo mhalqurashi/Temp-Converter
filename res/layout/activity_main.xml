@@ -1,0 +1,142 @@
+<GridLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.muath.temp.converter.MainActivity" >
+
+    <TextView
+        android:id="@+id/convertTextView"
+        android:layout_gravity="start"
+        android:text="@string/convert"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/tempEditText"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginBottom="@dimen/spacing"
+        android:digits="-0123456789."
+        android:hint="@string/prompt"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <GridLayout
+        android:id="@+id/radioButtonGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:columnCount="2"
+        android:useDefaultMargins="true" >
+
+        <TextView
+            android:id="@+id/fromTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/from"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/toTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/to"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <RadioGroup
+            android:id="@+id/fromRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            android:checkedButton="@+id/fromFahrenheitRadio" >
+
+            <RadioButton
+                android:id="@+id/fromFahrenheitRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/fahrenheit" />
+
+            <RadioButton
+                android:id="@+id/fromCelsiusRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/celsius" />
+
+            <RadioButton
+                android:id="@+id/fromKelvinRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kelvin" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/toRadioGroup"
+            android:layout_width="wrap_content"
+            android:checkedButton="@+id/toCelsiusRadio"
+            android:layout_gravity="start" >
+
+            <RadioButton
+                android:id="@+id/toFahrenheitRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fahrenheit" />
+
+            <RadioButton
+                android:id="@+id/toCelsiusRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/celsius" />
+
+            <RadioButton
+                android:id="@+id/toKelvinRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kelvin" />
+        </RadioGroup>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/convertButton" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/conversionFormulaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/conversionFormula"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/conversionFormulaDisplayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+</GridLayout>
